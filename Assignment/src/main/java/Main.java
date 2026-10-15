@@ -4,7 +4,6 @@ import Shapes.TwoDim.Polygon.Square;
 import Shapes.TwoDim.Polygon.RegularHexagon;
 import Shapes.TwoDim.NonPolygon.Ellipse;
 import Shapes.TwoDim.NonPolygon.Circle;
-import Shapes.ThreeDiM.ThreeDimShape;
 import Shapes.ThreeDiM.Polyhedra.RectangularPrism;
 import Shapes.ThreeDiM.Polyhedra.Cube;
 import Shapes.ThreeDiM.NonPolyhedra.Sphere;
@@ -23,9 +22,9 @@ public class Main {
                     shape.getCategory(), shape.perimeter(), shape.area());
         }
 
-        ThreeDimShape[] solidShapes = {new RectangularPrism(2, 3, 4), new Cube(3),
+        Shapes.ThreeDiM.ThreeDimShape[] solidShapes = {new RectangularPrism(2, 3, 4), new Cube(3),
                 new Sphere(2), new Cylinder(2, 5), new Cone(3, 4)};
-        for (ThreeDimShape shape : solidShapes) {
+        for (Shapes.ThreeDiM.ThreeDimShape shape : solidShapes) {
             System.out.printf(java.util.Locale.ROOT,
                     "%s: dimension=%d, category=%s, surfaceArea=%.4f, volume=%.4f%n",
                     shape.getClass().getSimpleName(), shape.getDimension(),
